@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{43A7B8CD-6224-4054-9B80-2B49D3093A14}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Graphics</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>FBXSDK_SHARED;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)SDL2\SDL2;$(ProjectDir)GL\include\GL;$(ProjectDir)SDL2\SDL2_ttf-2.0.14\include;$(ProjectDir)SDL2\SDL2_image-2.0.1\include;$(ProjectDir)GLM;$(ProjectDir)fbx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)SDL2\lib;$(ProjectDir)SDL2\SDL2_image-2.0.1\lib\x86;$(ProjectDir)SDL2\SDL2_ttf-2.0.14\lib\x86;$(ProjectDir)GL\lib\Release\Win32;$(ProjectDir)fbx\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib;SDL2_ttf.lib;glew32.lib;OpenGL32.lib;libfbxsdk.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)SDL2\SDL2_image-2.0.1\include;$(ProjectDir)SDL2\SDL2;$(ProjectDir)SDL2\SDL2_ttf-2.0.14\include;$(ProjectDir)glew-1.13.0\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)SDL2\lib;$(ProjectDir)SDL2\SDL2_image-2.0.1\lib\x86;$(ProjectDir)SDL2\SDL2_ttf-2.0.14\lib\x86;$(ProjectDir)glew-1.13.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>FBXSDK_SHARED;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)SDL2\SDL2;$(ProjectDir)GL\include\GL;$(ProjectDir)SDL2\SDL2_ttf-2.0.14\include;$(ProjectDir)SDL2\SDL2_image-2.0.1\include;$(ProjectDir)GLM;$(ProjectDir)ImGui;$(ProjectDir)fbx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)SDL2\lib;$(ProjectDir)SDL2\SDL2_image-2.0.1\lib\x86;$(ProjectDir)SDL2\SDL2_ttf-2.0.14\lib\x86;$(ProjectDir)GL\lib\Release\Win32;$(ProjectDir)ImGui;$(ProjectDir)fbx\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2main.lib;SDL2.lib;SDL2_image.lib;SDL2_ttf.lib;glew32.lib;OpenGL32.lib;libfbxsdk.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AABB.cpp" />
+    <ClCompile Include="AnimationData.cpp" />
+    <ClCompile Include="BodyComponent.cpp" />
+    <ClCompile Include="Bone.cpp" />
+    <ClCompile Include="Camera3D.cpp" />
+    <ClCompile Include="Camera2D.cpp" />
+    <ClCompile Include="CCDInterpolate.cpp" />
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="ClothComponent.cpp" />
+    <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="DummyRotationComponent.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="FBO.cpp" />
+    <ClCompile Include="FollowMeComponent.cpp" />
+    <ClCompile Include="GBuffer.cpp" />
+    <ClCompile Include="KeyFrameAnimationComponent.cpp" />
+    <ClCompile Include="LightPointComponent.cpp" />
+    <ClCompile Include="LineComponent.cpp" />
+    <ClCompile Include="LocalLightMoverComponent.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="MJFBXImporter.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="FrameRateController.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_draw.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MJImGui.cpp" />
+    <ClCompile Include="MouseManager.cpp" />
+    <ClCompile Include="ModelLoader.cpp" />
+    <ClCompile Include="Move2DComponent.cpp" />
+    <ClCompile Include="Move3DComponent.cpp" />
+    <ClCompile Include="MoveAlongPathComponent.cpp" />
+    <ClCompile Include="PainterComponent.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="PhysicsManager.cpp" />
+    <ClCompile Include="Pyshics3DManager.cpp" />
+    <ClCompile Include="Quaternion.cpp" />
+    <ClCompile Include="RayPlaneIntersectEvaluatorComponent.cpp" />
+    <ClCompile Include="Render2D.cpp" />
+    <ClCompile Include="Render3D.cpp" />
+    <ClCompile Include="GLObject.cpp" />
+    <ClCompile Include="RenderManager.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="SpawnerComponent.cpp" />
+    <ClCompile Include="Spline.cpp" />
+    <ClCompile Include="SplinePathGeneratorComponent.cpp" />
+    <ClCompile Include="Spring.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="TransformComponent.cpp" />
+    <ClCompile Include="UILightController.cpp" />
+    <ClCompile Include="UIManager.cpp" />
+    <ClCompile Include="UIQuad.cpp" />
+    <ClCompile Include="UIUpdaterComponent.cpp" />
+    <ClCompile Include="VQM.cpp" />
+    <ClCompile Include="VQS.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AABB.h" />
+    <ClInclude Include="AnimationData.h" />
+    <ClInclude Include="BodyComponent.h" />
+    <ClInclude Include="Bone.h" />
+    <ClInclude Include="Camera3D.h" />
+    <ClInclude Include="Camera2D.h" />
+    <ClInclude Include="CCDInterpolate.h" />
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="ClothComponent.h" />
+    <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentAttacher.h" />
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="DummyRotationComponent.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="FBO.h" />
+    <ClInclude Include="FollowMeComponent.h" />
+    <ClInclude Include="GBuffer.h" />
+    <ClInclude Include="KeyFrameAnimationComponent.h" />
+    <ClInclude Include="LightPointComponent.h" />
+    <ClInclude Include="LineComponent.h" />
+    <ClInclude Include="LocalLightMoverComponent.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="MJFBXImporter.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="FrameRateController.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="MJImGui.h" />
+    <ClInclude Include="MouseManager.h" />
+    <ClInclude Include="ModelLoader.h" />
+    <ClInclude Include="Move2DComponent.h" />
+    <ClInclude Include="Move3DComponent.h" />
+    <ClInclude Include="MoveAlongPathComponent.h" />
+    <ClInclude Include="PainterComponent.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="PhysicsManager.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="Pyshics3DManager.h" />
+    <ClInclude Include="Quaternion.h" />
+    <ClInclude Include="RayPlaneIntersectEvaluatorComponent.h" />
+    <ClInclude Include="Render2D.h" />
+    <ClInclude Include="Render3D.h" />
+    <ClInclude Include="GLObject.h" />
+    <ClInclude Include="RenderManager.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Shape.h" />
+    <ClInclude Include="SpawnerComponent.h" />
+    <ClInclude Include="Sphere.h" />
+    <ClInclude Include="Spline.h" />
+    <ClInclude Include="SplinePathGeneratorComponent.h" />
+    <ClInclude Include="Spring.h" />
+    <ClInclude Include="Teapot.h" />
+    <ClInclude Include="TemplateHelpers.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Torus.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="TransformComponent.h" />
+    <ClInclude Include="UILightController.h" />
+    <ClInclude Include="UIManager.h" />
+    <ClInclude Include="UIQuad.h" />
+    <ClInclude Include="UISample.h" />
+    <ClInclude Include="UIUpdaterComponent.h" />
+    <ClInclude Include="VQM.h" />
+    <ClInclude Include="VQS.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Debug\ArtAssets\exported\FBX\Cubes.FBX" />
+    <None Include="..\Debug\ArtAssets\exported\FBX\FPlane.FBX" />
+    <None Include="..\Debug\ArtAssets\exported\FBX\Tad.fbx" />
+    <None Include="Ambient_Fragment.glsl" />
+    <None Include="Ambient_Vertex.glsl" />
+    <None Include="ArtAssets\exported\FBX\boy.FBX" />
+    <None Include="ClothVertex.glsl" />
+    <None Include="ClothFragment.glsl" />
+    <None Include="Default2DFragment.glsl" />
+    <None Include="DefaultFragment.glsl" />
+    <None Include="DefaultVertex.glsl" />
+    <None Include="Deferred_GBufferPass_Fragment.glsl" />
+    <None Include="LocalLight_Fragment.glsl" />
+    <None Include="LocalLight_Vertex.glsl" />
+    <None Include="LightingPass_Fragment.glsl" />
+    <None Include="NDCShaderFragment.glsl" />
+    <None Include="NDCShaderVertex.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="alpha-test.txt" />
+    <Text Include="alpha-test2.txt" />
+    <Text Include="alpha-test3.txt" />
+    <Text Include="ball.txt" />
+    <Text Include="Cloth.txt" />
+    <Text Include="EndEffector.txt" />
+    <Text Include="Cubes-Base.txt" />
+    <Text Include="Cube2.txt" />
+    <Text Include="Cubes-LeftLimb.txt" />
+    <Text Include="DebugCircle.txt" />
+    <Text Include="DebugQuad.txt" />
+    <Text Include="Cubes-RightLimb.txt" />
+    <Text Include="Deferred_GBufferPass_Vertex.glsl" />
+    <Text Include="Child1.txt" />
+    <Text Include="FPlane-FPlane.txt" />
+    <Text Include="Hips.txt" />
+    <Text Include="HomeworkConfig.txt" />
+    <Text Include="LightingPass_Vertex.glsl" />
+    <Text Include="Snaky.txt" />
+    <Text Include="Snaky2.txt" />
+    <Text Include="SphereLight.txt" />
+    <Text Include="Tad-Base.go.txt" />
+    <Text Include="Target.txt" />
+    <Text Include="UILoading.txt" />
+    <Text Include="meshbox.txt" />
+    <Text Include="Cube.txt" />
+    <Text Include="Default2DVertex.glsl" />
+    <Text Include="DigiLogo.txt" />
+    <Text Include="meshpyramid.txt" />
+    <Text Include="Plane.txt" />
+    <Text Include="pokeball.txt" />
+    <Text Include="superpokeball.txt" />
+    <Text Include="TextCanvas.txt" />
+    <Text Include="Sphere.txt" />
+    <Text Include="Teapot.txt" />
+    <Text Include="Torus.txt" />
+    <Text Include="InitialObjects.txt" />
+    <Text Include="UI_Less.txt" />
+    <Text Include="UI_LightController.txt" />
+    <Text Include="UI_More.txt" />
+    <Text Include="UI_X.txt" />
+    <Text Include="UI_Y.txt" />
+    <Text Include="UI_Z.txt" />
+    <Text Include="wacky_plane.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="FreeSans.ttf" />
+    <Font Include="segoeui.ttf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

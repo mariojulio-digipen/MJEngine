@@ -1,0 +1,55 @@
+#
+# Objects list
+#
+
+#Editor UI elements
+#o UI_LightController
+
+#o alpha-test
+#o alpha-test2
+#o alpha-test3
+
+#Scene
+#o meshpyramid
+#o Cube
+#f FPlane
+#
+o Sphere
+#
+o Ball
+#
+#o SphereLight
+#
+#f Tad
+#f boy
+#f snake_skeleton
+#
+
+o Target
+o Cloth
+
+#o Hips
+#o Child1
+#o EndEffector
+
+#
+#f Cubes
+#o pokeball
+#o superpokeball
+#o Snaky
+#o Snaky2
+#
+#o wacky_plane
+o Plane
+#o Target
+#
+#o Cube2
+#o Teapot
+#o Torus
+
+
+
+#o TextCanvas
+#o DigiLogo
+#o alpha-test2
+#o alpha-test

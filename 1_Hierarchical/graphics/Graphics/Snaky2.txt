@@ -1,0 +1,48 @@
+#
+# Snaky2
+#
+
+objectname Snaky2
+
+#
+# Render mode: 2D or 3D
+#
+
+rendermode ON_3D
+
+#
+# Path of the model to import
+#
+
+modelpath ArtAssets\exported\snaky_pose2.obj
+
+#
+# Components List 
+# Warning: 
+#   Transform component is a built-in component. 
+#   No need to add a Transform component
+#
+
+c UIUpdaterComponent
+c PainterComponent
+
+#
+# Game object's default initialization properties
+#
+
+compprops
+### Transform Properties ###
+#   x      y      z
+p -1.0000 0.5.0000 2.0000
+
+# angleX angleY angleZ
+r 0.0000 50.0000 0.0000
+
+#   sx     sy     sz
+s 0.006 0.006 0.006
+end_TransformComponent
+
+### Painter Properties ###
+
+end_PainterComponent
+

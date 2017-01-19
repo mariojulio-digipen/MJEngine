@@ -1,0 +1,198 @@
+#
+# UI_LightController
+#
+
+objectname UI_LightController
+
+#
+# Render mode: 2D or 3D
+#
+
+rendermode ON_2D
+
+
+#
+# Path of the model to import 
+#
+
+modelpath ArtAssets\exported\DialogBox.obj
+
+
+#
+# Components List 
+# Warning: 
+#   Transform component is a built-in component. 
+#   No need to add a Transform component
+#
+
+c UILightController
+c PainterComponent
+
+#
+# Game object's default initialization properties
+#
+
+compprops
+### TransformComponent Properties ###
+#   x      y      z
+p 5.0000 -5.0000 0.0000
+
+# angleX angleY angleZ
+r 0.0000 0.0000 0.0000
+
+#   sx      sy      sz
+s 256.0000 60.0000 0.0000
+end_TransformComponent
+
+
+### PainterComponent Properties ###
+end_PainterComponent
+
+### UILightController Properties ###
+
+elementControl TitleControl
+element title
+text Ligth Controller
+pos -120.0000 30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 120.0000 20.0000 0.0000
+color 255 0 0
+wrap 300
+endelement
+endTitleControl
+
+elementControl PositionControl
+
+element labelText
+text Position
+pos -180.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 60.0000 20.0000 0.0000
+color 0 0 0
+wrap 300
+endelement
+
+element morex
+pos -90.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element uix
+pos -60.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element lessx
+pos -30.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element morey
+pos 30.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element uiy
+pos 60.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element lessy
+pos 90.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element morez
+pos 150.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element uiz
+pos 180.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element lessz
+pos 210.0000 0.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+endControl
+
+elementControl ColorControl
+
+element labelText
+text Color
+pos -160.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 40.0000 20.0000 0.0000
+color 0 0 0
+wrap 100
+endelement
+
+element morex
+pos -90.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element uix
+pos -60.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element lessx
+pos -30.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element morey
+pos 30.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element uiy
+pos 60.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element lessy
+pos 90.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element morez
+pos 150.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element uiz
+pos 180.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+element lessz
+pos 210.0000 -30.0000 0.0000
+rot 0.0000 0.0000 0.0000
+size 10.0000 10.0000 0.0000
+endelement
+
+endControl
+
+#end_UILightController

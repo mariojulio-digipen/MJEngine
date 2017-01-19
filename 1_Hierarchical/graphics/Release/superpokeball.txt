@@ -1,0 +1,54 @@
+#
+# superpokeball
+#
+
+objectname superpokeball
+
+#
+# Render mode: 2D or 3D
+#
+
+rendermode ON_3D
+
+#
+# Path of the model to import 
+#
+
+modelpath ArtAssets\exported\superpokeball.obj
+
+#
+# Components List 
+# Warning: 
+#   Transform component is a built-in component. 
+#   No need to add a Transform component
+#
+
+c DummyRotationComponent
+c PainterComponent
+
+#
+# Game object's default initialization properties
+#
+
+compprops
+### TransformComponent Properties ###
+#   x      y      z
+p 4.0000 1.0000 0.0000
+
+# angleX angleY angleZ
+r 0.0000 180.0000 90.0000
+
+#   sx     sy     sz
+s 1.0000 1.0000 1.0000
+
+# coordinates system
+cs global
+end_TransformComponent
+
+### DummyRotationComponent Properties ###
+d -1.0000
+r 8.0000
+end_DummyRotationComponent
+
+### PainterComponent Properties ###
+end_PainterComponent

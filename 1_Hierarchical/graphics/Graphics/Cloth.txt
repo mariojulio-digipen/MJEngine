@@ -1,0 +1,51 @@
+#
+# Cloth
+#
+
+objectname Cloth
+
+#
+# Render mode: 2D or 3D
+#
+
+rendermode ON_3D
+
+#
+# Path of the model to import
+#
+
+scene 
+
+#
+# Components List 
+# Warning: 
+#   Transform component is a built-in component. 
+#   No need to add a Transform component
+#
+
+c PainterComponent
+c Move3DComponent
+c ClothComponent
+
+#
+# Game object's default initialization properties
+#
+
+compprops
+### TransformComponent Properties ###
+#   x      y      z
+p -2.0000 2.000 -2.0000
+
+# angleX angleY angleZ
+r 0.0000 0.0000 0.0000
+
+#   sx     sy     sz
+s 1.0000 1.0000 1.0000
+end_TransformComponent
+
+### TransformComponent Properties ###
+dim 24 24
+space 0.2
+mass 4
+k 5.5
+end_TransformComponent

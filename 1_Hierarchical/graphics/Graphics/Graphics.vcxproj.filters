@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\SampleApp">
+      <UniqueIdentifier>{5e7e4b0d-404b-4b80-89f0-33e8a0e702c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GamePlay">
+      <UniqueIdentifier>{28d7467b-4ea2-4fee-a6d2-89a71f44e8be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GraphicsAPI">
+      <UniqueIdentifier>{1f9e00d1-62f8-49ad-a624-961b720d7d50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SampleApp\Components">
+      <UniqueIdentifier>{fbca4bdd-ae1d-40bf-a6bd-bd982b0d86b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SampleApp\Core">
+      <UniqueIdentifier>{dd4c1aa9-bd20-4b5e-ac14-ba2433cd1e95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects">
+      <UniqueIdentifier>{14c22a0f-dc95-4847-9c3a-d763f7b828f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GraphicsAPI\Fonts">
+      <UniqueIdentifier>{8734bf04-b671-4d04-afed-44bab36cd95b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UITools">
+      <UniqueIdentifier>{bf0137f1-1b54-47a5-819c-f72c1a610830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UITools\Components">
+      <UniqueIdentifier>{45c6936b-14a3-472a-8a76-745c07dfd409}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UITools\UIObjects">
+      <UniqueIdentifier>{0cabd7f2-1560-4cc1-9791-4b665424b212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{e06ec9a1-8556-412d-92d2-878d661ebe4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hardcoded_Code">
+      <UniqueIdentifier>{88a7bb02-1d4a-42e2-aceb-ae3100a18b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GraphicsAPI">
+      <UniqueIdentifier>{d776b4b2-f1ff-482d-a6f6-2dff64149c0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ComponentsHeaders">
+      <UniqueIdentifier>{965569d3-f5e7-4fe6-9ffa-b92a8c7266d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{edf053f4-2c89-42a8-85c8-5b9f4c109c4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{d74f3ecc-512c-41c0-aab1-658fe9009d53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Events">
+      <UniqueIdentifier>{238f5cf0-bea9-4729-82df-6de23c9345ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SampleApp\Events">
+      <UniqueIdentifier>{876af366-58f9-4959-8ac6-1179c92ebe05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{f5764375-3d90-4cfe-a9b1-8a86bd5f0828}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GraphicsAPI\FBXImporter">
+      <UniqueIdentifier>{33857648-9665-4ab6-a63c-e17ca0e95e6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SampleApp\UI">
+      <UniqueIdentifier>{dd917888-bddf-49f5-b688-c482a11f94f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GraphicsAPI\MathUtils">
+      <UniqueIdentifier>{667b9b72-8637-42b6-a2e7-985f56340256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\CubesFBX">
+      <UniqueIdentifier>{080d1278-c967-410e-b1d8-69cc74729e55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Fplane">
+      <UniqueIdentifier>{4532b5d6-b773-4153-b81d-20fa6c930ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Tad">
+      <UniqueIdentifier>{6d058f1e-4a03-4d5b-8722-4db4e0bb00e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GraphicsAPI\FBXImporter\Animation">
+      <UniqueIdentifier>{942b1642-066c-4983-95f7-111143ee62dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{2f96c728-e2c6-4877-8dbe-6e7d48ce9b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Default2D">
+      <UniqueIdentifier>{fe1120ae-17fb-4aa5-a352-5e73856aac92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Default3D">
+      <UniqueIdentifier>{b2c8054a-7862-448d-b210-4afd3ed110c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Deferred Shading">
+      <UniqueIdentifier>{e7945ea9-fc2f-42f3-b64e-0d909cf5065a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\Hardcoded_Skeleton">
+      <UniqueIdentifier>{a8bd16f7-c9ef-4dc1-aa23-17a5207adfe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics\3D">
+      <UniqueIdentifier>{dcc357cd-c6fd-4f6d-a9d0-c9b128408dc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics\2D">
+      <UniqueIdentifier>{edb11681-406b-480f-ad10-4236887dc728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics\General">
+      <UniqueIdentifier>{6ea3244d-09c4-47ea-921d-284dec5eaa73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\ClothesShaders">
+      <UniqueIdentifier>{c0107b37-514e-4d63-97f3-664dc75b49e3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files\SampleApp</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="GLObject.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera2D.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIQuad.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera3D.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="Render2D.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="Render3D.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseManager.cpp">
+      <Filter>Source Files\SampleApp\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files\SampleApp\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameRateController.cpp">
+      <Filter>Source Files\SampleApp\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files\SampleApp\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\SampleApp\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyRotationComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TransformComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files\SampleApp\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="PainterComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderManager.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="UILightController.cpp">
+      <Filter>Source Files\UITools\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="BodyComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Move2DComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Source Files\SampleApp\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Source Files\SampleApp\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnerComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoader.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="MJImGui.cpp">
+      <Filter>Source Files\SampleApp\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManager.cpp">
+      <Filter>Source Files\SampleApp\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MJFBXImporter.cpp">
+      <Filter>Source Files\GraphicsAPI\FBXImporter</Filter>
+    </ClCompile>
+    <ClCompile Include="Quaternion.cpp">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="LightPointComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Move3DComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationData.cpp">
+      <Filter>Source Files\GraphicsAPI\FBXImporter\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Bone.cpp">
+      <Filter>Source Files\GraphicsAPI\FBXImporter\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="GBuffer.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="FBO.cpp">
+      <Filter>Source Files\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="VQS.cpp">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="LineComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyFrameAnimationComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalLightMoverComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="UIUpdaterComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="RayPlaneIntersectEvaluatorComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="SplinePathGeneratorComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveAlongPathComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files\GraphicsAPI\FBXImporter\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Spline.cpp">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="FollowMeComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CCDInterpolate.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Pyshics3DManager.cpp">
+      <Filter>Source Files\Physics\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="AABB.cpp">
+      <Filter>Source Files\Physics\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Source Files\Physics\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>Source Files\Physics\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsManager.cpp">
+      <Filter>Source Files\Physics\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Source Files\Physics\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Source Files\Physics\General</Filter>
+    </ClCompile>
+    <ClCompile Include="Spring.cpp">
+      <Filter>Source Files\Physics\General</Filter>
+    </ClCompile>
+    <ClCompile Include="ClothComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="VQM.cpp">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ComponentAttacher.h">
+      <Filter>Header Files\Hardcoded_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera2D.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera3D.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="GLObject.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoader.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Render2D.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Render3D.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderManager.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameRateController.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseManager.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Teapot.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateHelpers.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Torus.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="UILightController.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="UIQuad.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="UISample.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="BodyComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyRotationComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Move2DComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="PainterComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Circle.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsManager.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnerComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MJImGui.h">
+      <Filter>Source Files\SampleApp\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Quaternion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LightPointComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Move3DComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Bone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FBO.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="GBuffer.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationData.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="MJFBXImporter.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="VQS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LineComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyFrameAnimationComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalLightMoverComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="UIUpdaterComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="RayPlaneIntersectEvaluatorComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Spline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SplinePathGeneratorComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveAlongPathComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FollowMeComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CCDInterpolate.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Pyshics3DManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClothComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="VQM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Debug\ArtAssets\exported\FBX\Cubes.FBX">
+      <Filter>Source Files\GameObjects\CubesFBX</Filter>
+    </None>
+    <None Include="..\Debug\ArtAssets\exported\FBX\FPlane.FBX">
+      <Filter>Source Files\GameObjects\Fplane</Filter>
+    </None>
+    <None Include="..\Debug\ArtAssets\exported\FBX\Tad.fbx">
+      <Filter>Source Files\GameObjects\Tad</Filter>
+    </None>
+    <None Include="Default2DFragment.glsl">
+      <Filter>Resource Files\Shaders\Default2D</Filter>
+    </None>
+    <None Include="DefaultFragment.glsl">
+      <Filter>Resource Files\Shaders\Default3D</Filter>
+    </None>
+    <None Include="DefaultVertex.glsl">
+      <Filter>Resource Files\Shaders\Default3D</Filter>
+    </None>
+    <None Include="Deferred_GBufferPass_Fragment.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </None>
+    <None Include="NDCShaderFragment.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </None>
+    <None Include="NDCShaderVertex.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </None>
+    <None Include="LightingPass_Fragment.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </None>
+    <None Include="Ambient_Vertex.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </None>
+    <None Include="Ambient_Fragment.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </None>
+    <None Include="LocalLight_Fragment.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </None>
+    <None Include="LocalLight_Vertex.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </None>
+    <None Include="ArtAssets\exported\FBX\boy.FBX">
+      <Filter>Source Files\GameObjects\Tad</Filter>
+    </None>
+    <None Include="ClothFragment.glsl">
+      <Filter>Resource Files\Shaders\ClothesShaders</Filter>
+    </None>
+    <None Include="ClothVertex.glsl">
+      <Filter>Resource Files\Shaders\ClothesShaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Cube.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Plane.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Sphere.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Teapot.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Torus.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="InitialObjects.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="DigiLogo.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="alpha-test.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="alpha-test2.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="UI_LightController.txt">
+      <Filter>Source Files\UITools\UIObjects</Filter>
+    </Text>
+    <Text Include="TextCanvas.txt">
+      <Filter>Source Files\UITools\UIObjects</Filter>
+    </Text>
+    <Text Include="UI_X.txt">
+      <Filter>Source Files\UITools\UIObjects</Filter>
+    </Text>
+    <Text Include="UI_Y.txt">
+      <Filter>Source Files\UITools\UIObjects</Filter>
+    </Text>
+    <Text Include="UI_Z.txt">
+      <Filter>Source Files\UITools\UIObjects</Filter>
+    </Text>
+    <Text Include="UI_More.txt">
+      <Filter>Source Files\UITools\UIObjects</Filter>
+    </Text>
+    <Text Include="UI_Less.txt">
+      <Filter>Source Files\UITools\UIObjects</Filter>
+    </Text>
+    <Text Include="pokeball.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="meshbox.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="meshpyramid.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="superpokeball.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="UILoading.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="DebugCircle.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="DebugQuad.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Cube2.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="alpha-test3.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Snaky.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Cubes-LeftLimb.txt">
+      <Filter>Source Files\GameObjects\CubesFBX</Filter>
+    </Text>
+    <Text Include="Cubes-RightLimb.txt">
+      <Filter>Source Files\GameObjects\CubesFBX</Filter>
+    </Text>
+    <Text Include="Cubes-Base.txt">
+      <Filter>Source Files\GameObjects\CubesFBX</Filter>
+    </Text>
+    <Text Include="FPlane-FPlane.txt">
+      <Filter>Source Files\GameObjects\Fplane</Filter>
+    </Text>
+    <Text Include="Tad-Base.go.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Default2DVertex.glsl">
+      <Filter>Resource Files\Shaders\Default2D</Filter>
+    </Text>
+    <Text Include="Deferred_GBufferPass_Vertex.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </Text>
+    <Text Include="LightingPass_Vertex.glsl">
+      <Filter>Resource Files\Shaders\Deferred Shading</Filter>
+    </Text>
+    <Text Include="HomeworkConfig.txt" />
+    <Text Include="SphereLight.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="ball.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="wacky_plane.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Snaky2.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Target.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Hips.txt">
+      <Filter>Source Files\GameObjects\Hardcoded_Skeleton</Filter>
+    </Text>
+    <Text Include="EndEffector.txt">
+      <Filter>Source Files\GameObjects\Hardcoded_Skeleton</Filter>
+    </Text>
+    <Text Include="Child1.txt">
+      <Filter>Source Files\GameObjects\Hardcoded_Skeleton</Filter>
+    </Text>
+    <Text Include="Cloth.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="FreeSans.ttf">
+      <Filter>Source Files\GraphicsAPI\Fonts</Filter>
+    </Font>
+    <Font Include="segoeui.ttf">
+      <Filter>Source Files\GraphicsAPI\Fonts</Filter>
+    </Font>
+  </ItemGroup>
+</Project>

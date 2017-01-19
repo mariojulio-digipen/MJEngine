@@ -1,0 +1,37 @@
+#
+# Text Y
+#
+
+objectname Y
+
+#
+# Render mode: 2D or 3D
+#
+
+rendermode ON_2D_trans
+
+
+#
+# Path of the model to import 
+#
+
+modelpath ArtAssets\exported\UIY.obj
+
+
+#
+# Components List 
+# Warning: 
+#   Transform component is a built-in component. 
+#   No need to add a Transform component
+#
+
+c PainterComponent
+
+#
+# Game object's default initialization properties
+#
+
+compprops
+
+### PainterComponent Properties ###
+end_PainterComponent

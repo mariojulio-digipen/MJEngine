@@ -1,0 +1,53 @@
+#
+# Target
+#
+
+objectname Target
+
+#
+# Render mode: 2D or 3D
+#
+
+rendermode ON_3D
+
+#
+# Path of the model to import
+#
+
+modelpath ArtAssets\exported\target.obj
+
+#
+# Components List 
+# Warning: 
+#   Transform component is a built-in component. 
+#   No need to add a Transform component
+#
+
+#c Move3DComponent
+#c UIUpdaterComponent
+c PainterComponent
+
+#
+# Game object's default initialization properties
+#
+
+compprops
+### TransformComponent Properties ###
+#   x      y      z
+p 0.0000 0.5000 0.0000
+
+# angleX angleY angleZ
+r 0.0000 0.0000 0.0000
+
+#   sx     sy     sz
+s 2.000 2.000 2.000
+end_TransformComponent
+
+### Move3D Properties ###
+
+end_Move3DComponent
+
+### Painter Properties ###
+
+end_PainterComponent
+

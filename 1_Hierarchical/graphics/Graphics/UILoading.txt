@@ -1,0 +1,61 @@
+#
+# UILoading
+#
+
+objectname UILoading
+
+#
+# Render mode: 2D or 3D
+#
+
+rendermode ON_2D
+
+
+#
+# Path of the model to import 
+#
+
+modelpath ArtAssets\exported\UILoading.obj
+
+
+#
+# Components List 
+# Warning: 
+#   Transform component is a built-in component. 
+#   No need to add a Transform component
+#
+
+#c BodyComponent
+c DummyRotationComponent
+c PainterComponent
+
+#
+# Game object's default initialization properties
+#
+
+compprops
+### TransformComponent Properties ###
+#   x      y      z
+p 700.0000 -300.0000 0.0000
+
+# angleX angleY angleZ
+r 0.0000 0.0000 0.0000
+
+#   sx     sy     sz
+s 100.0000 100.0000 0.0000
+
+# coordinate system
+cs global
+end_TransformComponent
+
+### BodyComponent Properties ###
+#       left   right    top    bottom
+aabb -100.0000 100.0000 100.0000 -100.0000
+#       radius
+#circle 100.0000
+mass 0.0000
+invmass 1.0000
+end_BodyComponent
+
+### PainterComponent Properties ###
+end_PainterComponent
