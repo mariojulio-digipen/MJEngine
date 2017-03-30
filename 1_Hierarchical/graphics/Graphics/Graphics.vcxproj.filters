@@ -118,6 +118,21 @@
     <Filter Include="Resource Files\Shaders\ClothesShaders">
       <UniqueIdentifier>{c0107b37-514e-4d63-97f3-664dc75b49e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\SampleApp\AudioTest">
+      <UniqueIdentifier>{a060b2ca-86b6-47bc-b151-c3fc9ae42ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects\MeshParticle">
+      <UniqueIdentifier>{8dcdd0e2-4ccc-4339-aa93-378d4c8182bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\MeshParticleShaders">
+      <UniqueIdentifier>{0907f5f7-7c70-4abf-b121-8a68d9f9afdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SampleApp\Components\OceanBehavior">
+      <UniqueIdentifier>{fd1678ac-59dd-4d31-b56c-77cb3af8b948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\OceanShaders">
+      <UniqueIdentifier>{07ac6fc2-adb2-4c11-85a7-c4da66135ed3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Shader.cpp">
@@ -308,6 +323,39 @@
     </ClCompile>
     <ClCompile Include="VQM.cpp">
       <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="Volume3DComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleVortexComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem.cpp">
+      <Filter>Source Files\Physics\General</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshParticle.cpp">
+      <Filter>Source Files\Physics\General</Filter>
+    </ClCompile>
+    <ClCompile Include="Lighter.cpp">
+      <Filter>Source Files\SampleApp</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSpiralComponent.cpp">
+      <Filter>Source Files\SampleApp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="OceanComponent.cpp">
+      <Filter>Source Files\SampleApp\Components\OceanBehavior</Filter>
+    </ClCompile>
+    <ClCompile Include="FFT1.cpp">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="FFT2.cpp">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="IFFT2.cpp">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoBuffer.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -512,6 +560,39 @@
     <ClInclude Include="VQM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Volume3DComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleVortexComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshParticle.h">
+      <Filter>Header Files\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Lighter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSpiralComponent.h">
+      <Filter>Header Files\ComponentsHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="OceanComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FFT1.h">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="FFT2.h">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="IFFT2.h">
+      <Filter>Source Files\GraphicsAPI\MathUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Debug\ArtAssets\exported\FBX\Cubes.FBX">
@@ -564,6 +645,21 @@
     </None>
     <None Include="ClothVertex.glsl">
       <Filter>Resource Files\Shaders\ClothesShaders</Filter>
+    </None>
+    <None Include="ArtAssets\exported\FBX\FMeshPart.FBX">
+      <Filter>Source Files\GameObjects\MeshParticle</Filter>
+    </None>
+    <None Include="MeshParticleVertex.glsl">
+      <Filter>Resource Files\Shaders\MeshParticleShaders</Filter>
+    </None>
+    <None Include="MeshParticleFragment.glsl">
+      <Filter>Resource Files\Shaders\MeshParticleShaders</Filter>
+    </None>
+    <None Include="OceanVertex.glsl">
+      <Filter>Resource Files\Shaders\OceanShaders</Filter>
+    </None>
+    <None Include="OceanFragment.glsl">
+      <Filter>Resource Files\Shaders\OceanShaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -695,6 +791,24 @@
       <Filter>Source Files\GameObjects\Hardcoded_Skeleton</Filter>
     </Text>
     <Text Include="Cloth.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="FMeshPart-FMeshPart.txt">
+      <Filter>Source Files\GameObjects\MeshParticle</Filter>
+    </Text>
+    <Text Include="MeshParticle.txt">
+      <Filter>Source Files\GameObjects\MeshParticle</Filter>
+    </Text>
+    <Text Include="ParticleVortexSystem.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="ParticleSpiralSystem.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="BlackHole.txt">
+      <Filter>Source Files\GameObjects</Filter>
+    </Text>
+    <Text Include="Ocean.txt">
       <Filter>Source Files\GameObjects</Filter>
     </Text>
   </ItemGroup>

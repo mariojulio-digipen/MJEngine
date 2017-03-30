@@ -21,6 +21,7 @@
 #include "ComponentAttacher.h"
 #include "FrameRateController.h"
 #include "UIUpdaterComponent.h"
+#include "Volume3DComponent.h"
 
 #include "VQS.h"
 
@@ -87,6 +88,36 @@ int parallelCreateGameObjectsInCPU(void* ptr)
 	}
 	SDL_AtomicIncRef(&stuffIsReady);
 	return 0;
+}
+
+void ResourceManager::Start()
+{
+	std::vector<GameObject*>::iterator GO2D = gameObjects2D.begin();
+	std::vector<GameObject*>::iterator GO3D = gameObjects3D.begin();
+	
+	while (GO2D != gameObjects2D.end())
+	{
+		if (!(*GO2D)->IsAlive)
+		{
+			GO2D = GO2D + 1;
+			continue;
+		}
+
+		(*GO2D)->Start();
+		GO2D = GO2D + 1;
+	}
+
+	while (GO3D != gameObjects3D.end())
+	{
+		if (!(*GO3D)->IsAlive)
+		{
+			GO3D = GO3D + 1;
+			continue;
+		}
+
+		(*GO3D)->Start();
+		GO3D = GO3D + 1;
+	}
 }
 
 void ResourceManager::GenerateGameObjects()
@@ -166,6 +197,7 @@ void ResourceManager::createGameObjectsInCPU()
 		}
 	}
 
+	
 
 	// iterate objects in scene files. This sections decides whether to create
 	// a game object using an OBJ (1-1) source or a different method using FBX(1-N) source
@@ -300,7 +332,6 @@ void ResourceManager::createAnimationMeshAsGameObject(Mesh* mesh)
 		glm::mat4 matrix = data.globalBindPoseMatrix;
 		meshGO->GetGLObject()->Transform->DeformMatrices.insert(std::make_pair(infBoneName, matrix));
 	}
-	//meshGO->GetGLObject()->Transform->DeformMatrices = clusterData->
 
 }
 
@@ -357,7 +388,8 @@ void ResourceManager::createBoneAsGameObject(Bone* bone)
 
 	if(glo->Bonetype == BONE_TYPE::ROOT)
 	{
-		//assembleComponent<UIUpdaterComponent>(boneGO);
+		//assembleComponent<Volume3DComponent>(boneGO);
+		assembleComponent<UIUpdaterComponent>(boneGO);
 		assembleComponent<MoveAlongPathComponent>(boneGO);
 		//assembleComponent<Move3DComponent>(boneGO);
 	}
@@ -443,6 +475,7 @@ void ResourceManager::createInitialFromFBX(std::string name)
 		{
 			GameObject* fbxgo = new GameObject;
 			fbxgo->IsAlive = true;
+			//fbxgo->IsMesh = true;
 			std::string goName = goDataIt->first;
 			fbxgo->SetName(goName);
 			fbxgo->GetGLObject()->Name = goName;
@@ -918,10 +951,6 @@ void ResourceManager::Update3DGameObjects()
 	int bonecount = 0;
 	int cubecount = 0;
 	std::vector<GameObject*>::iterator GO3D = gameObjects3D.begin();
-
-	/*size_t size_of_go = sizeof((*(*GO3D)));
-	size_t vector_size = gameObjects3D.size() * size_of_go;
-	std::cout << vector_size / 1000 << "kb";*/
 
 
 	while (GO3D != gameObjects3D.end())

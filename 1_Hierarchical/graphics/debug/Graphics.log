@@ -1,8 +1,0 @@
-﻿  Transform.cpp
-  RayPlaneIntersectEvaluatorComponent.cpp
-  FollowMeComponent.cpp
-c:\users\mariojulio\dropbox\digipen\cs560 - animation\1_hierarchical\1_hierarchical\graphics\graphics\followmecomponent.cpp(189): warning C4305: '=': truncation from 'double' to 'float'
-  Bone.cpp
-  Generating Code...
-cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
-  Graphics.vcxproj -> C:\Users\Mariojulio\Dropbox\DigiPen\CS560 - Animation\1_Hierarchical\1_Hierarchical\graphics\Debug\Graphics.exe

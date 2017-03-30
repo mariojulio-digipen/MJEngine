@@ -1,5 +1,9 @@
 #pragma once
 
+#include "OceanComponent.h"
+#include "ParticleSpiralComponent.h"
+#include "ParticleVortexComponent.h"
+#include "Volume3DComponent.h"
 #include "ClothComponent.h"
 #include "FollowMeComponent.h"
 #include "MoveAlongPathComponent.h"
@@ -61,4 +65,12 @@ void attachComponents(std::string componentName, GameObject* go)
 		assembleComponent<FollowMeComponent>(go);
 	if (componentName == "ClothComponent")
 		assembleComponent<ClothComponent>(go);
+	if (componentName == "Volume3DComponent")
+		assembleComponent<Volume3DComponent>(go);
+	if (componentName == "ParticleVortexComponent")
+		assembleComponent<ParticleVortexComponent>(go);
+	if (componentName == "ParticleSpiralComponent")
+		assembleComponent<ParticleSpiralComponent>(go);
+	if (componentName == "OceanComponent")
+		assembleComponent<OceanComponent>(go);
 }

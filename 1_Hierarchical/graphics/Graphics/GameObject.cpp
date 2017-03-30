@@ -119,6 +119,18 @@ void GameObject::HandleEvent(const Event* const evt)
 	}
 }
 
+void GameObject::Start()
+{
+	std::vector<Component*>::iterator it = components.begin();
+	while (it != components.end())
+	{
+		if (!*it)
+			showDebugMessage("Error: Trying to handle events with a NULL component");
+		(*it)->Start();
+		it = it + 1;
+	}
+}
+
 void GameObject::CompleteExtraSetup()
 {
 	std::vector<Component*>::iterator it = components.begin();

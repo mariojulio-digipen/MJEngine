@@ -6,6 +6,7 @@
 
 #include <list>
 #include <vector>
+#include <glm.hpp>
 
 enum HomeWork
 {
@@ -83,6 +84,36 @@ public:
 	float Stick1LocationX;
 	float Stick1LocationY;
 	float Stick1LocationZ;
+
+	// particles
+	bool vortex = true;
+	bool spiral = false;
+
+	// Vortex
+	bool VortexActive = false;
+	float VortexTightnes = 1.5f;
+	float VortexRotationRate = 10.0f;
+
+	// Spiral
+	bool SpiralActive = false;
+	glm::vec3 SpiralSpawnLocation = glm::vec3(1.0f);
+	glm::vec3 SpiralSpawnVelocity = glm::vec3(5.7f, 0.95f, 1.0f);
+	int SpiralMaxParticles;// = 100;
+	int SpiralLifeSpan;// = 20;
+	float SpiralSigma;// = 1.0f;
+	bool CoolEffect = false;
+	float DumpingFactor = 0.03f;
+	bool AccelIncrease = false;
+
+	// Orbit
+	float BHGravity = 15.0f;
+	float BHMass = 25.0f;
+
+
+	// Ocean
+	float OceanGridLength = 64;
+	float OceanTimeStep = 0.5f;
+	float HeigthControl = 0.05f;
 
 	UIManager();
 	~UIManager();

@@ -76,6 +76,7 @@ public:
 	void UpdateAllComponents();
 	void SerializeAllComponents(std::string* word, std::istringstream* objcontentStream);
 	void HandleEvent(const Event* const evt);
+	void Start();
 	void CompleteExtraSetup();
 	void DestroyAllComponents();
 	void DestroyComponent(Component* componentToDestroy);

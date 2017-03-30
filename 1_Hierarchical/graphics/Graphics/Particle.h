@@ -2,17 +2,16 @@
 
 #include <glm.hpp>
 #include <vector>
+#include <gtc\matrix_transform.hpp>
 
-class Spring;
 class Particle
 {
-private:
-	//std::vector<Spring*> attachedSprings;
-	//glm::vec3 totalForce;
 
 public:
-
+	// physical properties for particles
 	glm::vec3 location; // qi
+	glm::mat4 translate;
+
 	glm::vec3 velocity;
 	glm::vec3 normal;
 
@@ -21,12 +20,17 @@ public:
 	short id;
 	
 
+
+
+	virtual void SetLocation(const glm::vec3& loc);
+	virtual void SetVelocity(const glm::vec3& vel);
+
+	glm::vec3 GetVelocity() { return velocity; }
+	glm::vec3 GetLocation() { return location; }
+	glm::mat4 GetTranslationMatrix() { return translate; }
+	
+
 	Particle();
-	~Particle();
-
-	//void SetTotalForce(glm::vec3 tForce) { this->totalForce = tForce; }
-	//glm::vec3 GetTotalForce() { return this->totalForce; }
-
-	//void attachSpring(Spring* spring) { attachedSprings.push_back(spring); }
+	virtual ~Particle();
 };
 

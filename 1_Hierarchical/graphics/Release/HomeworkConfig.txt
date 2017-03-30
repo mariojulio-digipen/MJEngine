@@ -1,7 +1,0 @@
-#
-# homework configuration file
-#
-
-# choose "graphics" or "animation"
-#hw graphics
-hw animation

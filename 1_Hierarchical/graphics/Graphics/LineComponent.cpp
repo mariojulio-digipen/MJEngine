@@ -50,7 +50,10 @@ void LineComponent::Update()
 	GLObject* glo = owner->GetGLObject();
 	//Transform->ParentPosition, Transform->Position
 
-	
+	if (glo->Name == "Pelvis")
+	{
+		printf("");
+	}
 
 	if (ownerParent)
 	{

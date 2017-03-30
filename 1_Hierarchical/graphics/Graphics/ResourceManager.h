@@ -72,6 +72,7 @@ public:
 
 
 	void GenerateGameObjects();
+	void Start();
 	void DeleteGameObjects();
 	GameObject* CreateOneGameObject(std::string name, bool spawned = false, bool deferred = false);
 	void Update3DGameObjects();

@@ -103,10 +103,10 @@ void Transform::Update(GameObject** go)
 			RotationAngle = VQS_ModelToWorld.Rotator.GetEulerAngles();
 			Size = VQS_ModelToWorld.GetUniformScale();
 
-			int programID;
+			/*int programID;
 			glGetIntegerv(GL_CURRENT_PROGRAM, &programID);
 			GLint bonesWeightLoc = glGetUniformLocation(programID, "VertexBonesWeights");
-			glUniformMatrix4fv(bonesWeightLoc, DeformMatrices.size(), GL_FALSE, &DeformMatrices[0][0][0]);
+			glUniformMatrix4fv(bonesWeightLoc, DeformMatrices.size(), GL_FALSE, &DeformMatrices[0][0][0]);*/
 
 			isMesh = 1;
 		}

@@ -14,7 +14,8 @@ Shader::Shader() :
 	NormalAttLocation(2),
 	TangetAttLocation(3),
 	BoneIdAttLocation(4),
-	BoneWeightAttLocation(5)
+	BoneWeightAttLocation(5),
+	InstanceMatrixAttLocation(6)
 {
 }
 //
@@ -163,8 +164,9 @@ bool Shader::Init(std::string vertexFile, std::string fragmentFile)
 	BindAttributeLocation(TextureAttLocation, "TextureCoord");
 	BindAttributeLocation(NormalAttLocation, "Normal");
 	BindAttributeLocation(TangetAttLocation, "Tangent");
-	BindAttributeLocation(BoneIdAttLocation, "BoneIDs");
+	BindAttributeLocation(BoneIdAttLocation, "BoneIDs");//InstanceMatrix
 	BindAttributeLocation(BoneWeightAttLocation, "BoneWeights");
+	BindAttributeLocation(InstanceMatrixAttLocation, "InstanceMatrix");
 
 	if (!LoadVertexShader(vertexFile))
 		return false;

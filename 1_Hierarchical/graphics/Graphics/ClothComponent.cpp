@@ -154,7 +154,7 @@ void ClothComponent::HandleEvent(const Event* const evt)
 
 void ClothComponent::CompleteExtraSetup()
 {
-
+	if (!physics3DManager) return;
 	targetSphereTrans = resourceManager->GetGameObjectByName("Target")->FindComponent<TransformComponent>();
 	physics3DManager->SetTestTargeTrans(targetSphereTrans);
 	/*physics3DManager->SetTestTargetLocation(&targetSphereTrans->GetPosition());
@@ -187,9 +187,17 @@ void ClothComponent::updateGridStickPoints()
 	int max_x, max_z;
 	max_x = this->cols - 1;
 	max_z = this->rows - 1;
-	particleGrid[0][0]->isFixed = uiManager->Stick1Released;				// bottom-left
-	particleGrid[0][max_x]->isFixed = uiManager->Stick2Released;			// bottom-right
-	particleGrid[max_z][0]->isFixed = uiManager->Stick3Released;			// top-left
+	
+	if(uiManager->Stick1Released)
+		particleGrid[0][0]->isFixed = uiManager->Stick1Released;				// bottom-left
+	
+	if(uiManager->Stick2Released)
+		particleGrid[0][max_x]->isFixed = uiManager->Stick2Released;			// bottom-right
+	
+	if(uiManager->Stick3Released)
+		particleGrid[max_z][0]->isFixed = uiManager->Stick3Released;			// top-left
+	
+	if(uiManager->Stick4Released)
 	particleGrid[max_x][max_z]->isFixed = uiManager->Stick4Released;		// top-right
 }
 
@@ -354,6 +362,7 @@ void ClothComponent::createTrianglesData()
 
 void ClothComponent::initParticles()
 {
+	if (!physics3DManager) return;
 	// initialize particles
 	int particleId = 0;
 	for (int i = 0; i < cols; i++)
@@ -401,6 +410,7 @@ void ClothComponent::initParticles()
 
 void ClothComponent::initSprings()
 {
+	if (!physics3DManager) return;
 	// all rows
 	// --------
 	// --------
@@ -629,6 +639,8 @@ void ClothComponent::buildClothVBOs()
 	GLObject* glo = GetOwner()->GetGLObject();
 	glBindVertexArray(clothVAO);
 	int sizeInBytes = 0;
+
+
 	// particles as vertices
 	glBindBuffer(GL_ARRAY_BUFFER, clothVBO_V);
 	sizeInBytes = (this->vertexNumber * 3) * sizeof(float);

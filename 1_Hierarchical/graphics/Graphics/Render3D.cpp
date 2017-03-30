@@ -32,10 +32,13 @@ Render3D::~Render3D()
 
 void Render3D::InitCamera()
 {
+		
+	//Position(215.142, 144.957, -134.688)
+	//	ViewDirection: 0.00450348, -0.434956, -0.900403
 	CurrentCamera->MouseMove = mouseManager;
 	CurrentCamera->InputMove = inputManager;
-	CurrentCamera->ViewDirection = glm::vec3(0.206282, -0.496878, -0.842941);//glm::vec3(0.0f, 0.0f, -1.0f); //glm::vec3(-0.639008f, -0.386654f, -0.664957f);//
-	CurrentCamera->Position = glm::vec3(-0.775346, 3.24137, 4.65617);//glm::vec3(0.0f, 5.0f, 20.1f); //glm::vec3(4.30213f, 2.83954f, 5.3389f);//
+	CurrentCamera->ViewDirection = glm::vec3(0.00450348f, -0.434956f, -0.900403f);//ViewDirection: 0.61234, -0.0499795, -0.788989 //glm::vec3(0.0f, 0.0f, -1.0f); //glm::vec3(-0.639008f, -0.386654f, -0.664957f);//
+	CurrentCamera->Position = glm::vec3(215.142f, 144.957f, -134.688f);//glm::vec3(0.0f, 5.0f, 20.1f); //glm::vec3(4.30213f, 2.83954f, 5.3389f);//
 	CurrentCamera->Up = glm::vec3(0.0f, 1.0f, 0.0f); 
 	CurrentCamera->FovAngleDegrees = 45.0f;
 

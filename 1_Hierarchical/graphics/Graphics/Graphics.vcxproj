@@ -170,13 +170,18 @@
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="FBO.cpp" />
+    <ClCompile Include="FFT1.cpp" />
+    <ClCompile Include="FFT2.cpp" />
     <ClCompile Include="FollowMeComponent.cpp" />
     <ClCompile Include="GBuffer.cpp" />
+    <ClCompile Include="IFFT2.cpp" />
     <ClCompile Include="KeyFrameAnimationComponent.cpp" />
     <ClCompile Include="LightPointComponent.cpp" />
     <ClCompile Include="LineComponent.cpp" />
     <ClCompile Include="LocalLightMoverComponent.cpp" />
     <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="MeshParticle.cpp" />
+    <ClCompile Include="Lighter.cpp" />
     <ClCompile Include="MJFBXImporter.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="FrameRateController.cpp" />
@@ -192,8 +197,11 @@
     <ClCompile Include="Move2DComponent.cpp" />
     <ClCompile Include="Move3DComponent.cpp" />
     <ClCompile Include="MoveAlongPathComponent.cpp" />
+    <ClCompile Include="OceanComponent.cpp" />
     <ClCompile Include="PainterComponent.cpp" />
     <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="ParticleSpiralComponent.cpp" />
+    <ClCompile Include="ParticleVortexComponent.cpp" />
     <ClCompile Include="PhysicsManager.cpp" />
     <ClCompile Include="Pyshics3DManager.cpp" />
     <ClCompile Include="Quaternion.cpp" />
@@ -201,6 +209,7 @@
     <ClCompile Include="Render2D.cpp" />
     <ClCompile Include="Render3D.cpp" />
     <ClCompile Include="GLObject.cpp" />
+    <ClCompile Include="ParticleSystem.cpp" />
     <ClCompile Include="RenderManager.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Shader.cpp" />
@@ -216,6 +225,8 @@
     <ClCompile Include="UIManager.cpp" />
     <ClCompile Include="UIQuad.cpp" />
     <ClCompile Include="UIUpdaterComponent.cpp" />
+    <ClCompile Include="VideoBuffer.cpp" />
+    <ClCompile Include="Volume3DComponent.cpp" />
     <ClCompile Include="VQM.cpp" />
     <ClCompile Include="VQS.cpp" />
   </ItemGroup>
@@ -237,13 +248,18 @@
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventManager.h" />
     <ClInclude Include="FBO.h" />
+    <ClInclude Include="FFT1.h" />
+    <ClInclude Include="FFT2.h" />
     <ClInclude Include="FollowMeComponent.h" />
     <ClInclude Include="GBuffer.h" />
+    <ClInclude Include="IFFT2.h" />
     <ClInclude Include="KeyFrameAnimationComponent.h" />
     <ClInclude Include="LightPointComponent.h" />
     <ClInclude Include="LineComponent.h" />
     <ClInclude Include="LocalLightMoverComponent.h" />
     <ClInclude Include="Mesh.h" />
+    <ClInclude Include="MeshParticle.h" />
+    <ClInclude Include="Lighter.h" />
     <ClInclude Include="MJFBXImporter.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="FrameRateController.h" />
@@ -255,8 +271,11 @@
     <ClInclude Include="Move2DComponent.h" />
     <ClInclude Include="Move3DComponent.h" />
     <ClInclude Include="MoveAlongPathComponent.h" />
+    <ClInclude Include="OceanComponent.h" />
     <ClInclude Include="PainterComponent.h" />
     <ClInclude Include="Particle.h" />
+    <ClInclude Include="ParticleSpiralComponent.h" />
+    <ClInclude Include="ParticleVortexComponent.h" />
     <ClInclude Include="PhysicsManager.h" />
     <ClInclude Include="Plane.h" />
     <ClInclude Include="Pyshics3DManager.h" />
@@ -265,6 +284,7 @@
     <ClInclude Include="Render2D.h" />
     <ClInclude Include="Render3D.h" />
     <ClInclude Include="GLObject.h" />
+    <ClInclude Include="ParticleSystem.h" />
     <ClInclude Include="RenderManager.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Shader.h" />
@@ -285,6 +305,8 @@
     <ClInclude Include="UIQuad.h" />
     <ClInclude Include="UISample.h" />
     <ClInclude Include="UIUpdaterComponent.h" />
+    <ClInclude Include="VideoBuffer.h" />
+    <ClInclude Include="Volume3DComponent.h" />
     <ClInclude Include="VQM.h" />
     <ClInclude Include="VQS.h" />
   </ItemGroup>
@@ -295,6 +317,7 @@
     <None Include="Ambient_Fragment.glsl" />
     <None Include="Ambient_Vertex.glsl" />
     <None Include="ArtAssets\exported\FBX\boy.FBX" />
+    <None Include="ArtAssets\exported\FBX\FMeshPart.FBX" />
     <None Include="ClothVertex.glsl" />
     <None Include="ClothFragment.glsl" />
     <None Include="Default2DFragment.glsl" />
@@ -304,14 +327,19 @@
     <None Include="LocalLight_Fragment.glsl" />
     <None Include="LocalLight_Vertex.glsl" />
     <None Include="LightingPass_Fragment.glsl" />
+    <None Include="MeshParticleFragment.glsl" />
+    <None Include="MeshParticleVertex.glsl" />
     <None Include="NDCShaderFragment.glsl" />
     <None Include="NDCShaderVertex.glsl" />
+    <None Include="OceanFragment.glsl" />
+    <None Include="OceanVertex.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="alpha-test.txt" />
     <Text Include="alpha-test2.txt" />
     <Text Include="alpha-test3.txt" />
     <Text Include="ball.txt" />
+    <Text Include="BlackHole.txt" />
     <Text Include="Cloth.txt" />
     <Text Include="EndEffector.txt" />
     <Text Include="Cubes-Base.txt" />
@@ -322,10 +350,15 @@
     <Text Include="Cubes-RightLimb.txt" />
     <Text Include="Deferred_GBufferPass_Vertex.glsl" />
     <Text Include="Child1.txt" />
+    <Text Include="FMeshPart-FMeshPart.txt" />
     <Text Include="FPlane-FPlane.txt" />
     <Text Include="Hips.txt" />
     <Text Include="HomeworkConfig.txt" />
     <Text Include="LightingPass_Vertex.glsl" />
+    <Text Include="MeshParticle.txt" />
+    <Text Include="Ocean.txt" />
+    <Text Include="ParticleSpiralSystem.txt" />
+    <Text Include="ParticleVortexSystem.txt" />
     <Text Include="Snaky.txt" />
     <Text Include="Snaky2.txt" />
     <Text Include="SphereLight.txt" />

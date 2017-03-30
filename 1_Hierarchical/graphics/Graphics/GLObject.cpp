@@ -42,14 +42,14 @@ void GLObject::CreateBuffers()
 		glGenBuffers(VBOsNumber, &vbosPerSection[i][0]);
 	}
 	
-	if (Name == "Cloth")
+	glGenVertexArrays(1, &lineVAO);
+	glGenBuffers(1, &lineVBO);
+
+	glGenVertexArrays(1, &dotVAO);
+	glGenBuffers(1, &dotVBO);
+
+	if (Name == "Cloth") // c'mon!! ¬¬' ....
 	{
-		glGenVertexArrays(1, &lineVAO);
-		glGenBuffers(1, &lineVBO);
-
-		glGenVertexArrays(1, &dotVAO);
-		glGenBuffers(1, &dotVBO);
-
 		glGenVertexArrays(1, &clothVAO);
 		glGenBuffers(1, &clothVBO_V);
 		glGenBuffers(1, &clothVBO_T);
@@ -302,6 +302,8 @@ void GLObject::BuildVBOsFromOBJ(int vboIndex, VBO_TYPE vboType, GLObject* cloneG
 
 		if (vboType == VERTEX)
 		{
+			if (Name == "FMeshPart")
+				printf("");
 			glBindBuffer(GL_ARRAY_BUFFER, vbosPerSection[sectionCounter][vboIndex]);
 
 			if (cloneGLObj == NULL) // is an initial object?
