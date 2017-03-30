@@ -30,8 +30,13 @@ public:
 
 	// Start Public properties list
 	glm::vec3 GetLightColor() { return lightColor; }
+	glm::vec3 GetLightPosition() { return lighPosition; }
+	glm::vec3 GetLightIntensity() { return lightIntensity; }
+	glm::vec3 GetLightAmbient() { return lightAmbient; }
+	
 	void SetLightColor(glm::vec3 color) { lightColor = color; }
 	void SetLightColor(float r, float g, float b) { lightColor = glm::vec3(r, g, b); }
+
 		// TODO - declare public members
 
 	// End Private properties list

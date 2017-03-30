@@ -31,6 +31,7 @@ void Pyshics3DManager::Update()
 	//int springVecSize = managedSprings.size();
 
 	Spring** my_iter = &managedSprings[0]; // this is a pointer to an element of this vector (which has pointers)
+	//if (!my_iter) return;
 	for (int i = 0; i < springsNum; i++)
 	{
 		float d, ext;

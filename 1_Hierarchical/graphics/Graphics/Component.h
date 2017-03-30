@@ -27,6 +27,7 @@ public:
 	virtual void Destroy() {}
 	virtual void Serialize(std::istringstream* objcontentStream) {}
 	virtual void CompleteExtraSetup() {}
+	virtual void Start() {}
 	virtual void HandleEvent(const Event* const evt) {}
 
 	GameObject* GetOwner() const { return owner; }

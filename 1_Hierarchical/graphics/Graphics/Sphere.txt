@@ -29,7 +29,7 @@ c DummyRotationComponent
 #c Move3DComponent
 c UIUpdaterComponent
 c LightPointComponent
-c PainterComponent
+#c PainterComponent
 
 #
 # Game object's default initialization properties
@@ -38,7 +38,7 @@ c PainterComponent
 compprops
 ### TransformComponent Properties ###
 #   x      y      z
-p 8.0000 8.0000 0.0000
+p 0.0000 0.0000 0.0000
 
 # angleX angleY angleZ
 r 0.0000 0.0000 0.0000

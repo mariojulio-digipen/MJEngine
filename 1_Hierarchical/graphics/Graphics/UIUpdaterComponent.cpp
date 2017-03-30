@@ -119,24 +119,33 @@ void UIUpdaterComponent::Update()
 		glm::vec3 axis_converted;
 		// Use root node instead the name
 		//if (GetOwner()->GetName() == "Hips")
-		if (GetOwner()->GetGLObject()->Bonetype == BONE_TYPE::ROOT)
+
+		if (GetOwner()->GetName() != "Target")
 		{
-			trans->SetPosition(glm::vec3((*vec).x, (*vec).y, (*vec).z)*0.001f);
-			glm::mat4 T = glm::translate(glm::mat4(1.0f), trans->GetPosition());
-			GetOwner()->GetGLObject()->Transform->TranslateForBoneMatrix = T;
+			if (GetOwner()->GetGLObject()->Bonetype == BONE_TYPE::ROOT)
+			{
+				trans->SetPosition(glm::vec3((*vec).x, (*vec).y, (*vec).z)*0.001f);
+				glm::mat4 T = glm::translate(glm::mat4(1.0f), trans->GetPosition());
+				GetOwner()->GetGLObject()->Transform->TranslateForBoneMatrix = T;
+			}
+			else
+			{
+				trans->SetPosition(glm::vec3((*vec).x, -(*vec).z, (*vec).y));
+				glm::mat4 T = glm::translate(glm::mat4(1.0f), trans->GetPosition());
+				GetOwner()->GetGLObject()->Transform->TranslateForBoneMatrix = T;
+			}
 		}
-		else
-		{
-			trans->SetPosition(glm::vec3((*vec).x, -(*vec).z, (*vec).y));
-			glm::mat4 T = glm::translate(glm::mat4(1.0f), trans->GetPosition());
-			GetOwner()->GetGLObject()->Transform->TranslateForBoneMatrix = T;
-		}
+		
 
 		
 
 		// send updated vqs translator
-		glm::vec3 VQS_T = trans->GetPosition();
-		GetOwner()->GetGLObject()->Transform->VQS_TranslatorForBone = VQS_T;
+		if (GetOwner()->GetName() != "Target")
+		{
+			glm::vec3 VQS_T = trans->GetPosition();
+			GetOwner()->GetGLObject()->Transform->VQS_TranslatorForBone = VQS_T;
+		}
+		
 
 
 

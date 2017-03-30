@@ -131,17 +131,17 @@ void AnimationData::traverseBones(FbxNode* bone)
 		// TODO: uncomment to implement the skinning deformation
 		
 		//// for meshes:
-		//if (lNodeAttribute->GetAttributeType() == FbxNodeAttribute::eMesh)
-		//{
-		//	Mesh animationMesh;
-		//	animationMesh.SetScene(scene);
-		//	animationMesh.SetAnimStack(defaultAnimStack);
-		//	animationMesh.SetAnimationLayer(defaultAnimLayer);
-		//	animationMesh.SetNode(childNode);
-		//	animationMesh.Initialize();
-		//	animationMesh.StoreData();
-		//	AnimationMeshes.push_back(animationMesh);
-		//}
+		/*if (lNodeAttribute->GetAttributeType() == FbxNodeAttribute::eMesh)
+		{
+			Mesh animationMesh;
+			animationMesh.SetScene(scene);
+			animationMesh.SetAnimStack(defaultAnimStack);
+			animationMesh.SetAnimationLayer(defaultAnimLayer);
+			animationMesh.SetNode(childNode);
+			animationMesh.Initialize();
+			animationMesh.StoreData();
+			AnimationMeshes.push_back(animationMesh);
+		}*/
 
 		// for skeleton:
 		if (lNodeAttribute->GetAttributeType() == FbxNodeAttribute::eSkeleton)

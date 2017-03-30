@@ -27,7 +27,7 @@ void FrameRateController::SetTargetFrameRate(const float frameRate)
 void FrameRateController::FrameStart()
 {
 	
-	DeltaTime = 1.0f;
+	//DeltaTime = 1.0f;
 	ticksAtFrameStart = SDL_GetTicks();
 }
 

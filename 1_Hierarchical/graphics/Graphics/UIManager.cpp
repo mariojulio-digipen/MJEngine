@@ -14,6 +14,9 @@ extern FrameRateController* frameRateController;
 
 UIManager::UIManager() : active(true), LightsNumber(0)
 {
+	SpiralMaxParticles = 100;
+	SpiralLifeSpan = 20;
+	SpiralSigma = 1.0f;
 }
 
 
@@ -106,7 +109,7 @@ void UIManager::UIShowSampleWindow()
 	ImGui::Checkbox("Debug Mode", &RenderDebugMode);
 	ImGui::Text(" ");
 
-	ImGui::Text("--------------------");
+	/*ImGui::Text("--------------------");
 	ImGui::Text("Debug CCD");
 	if (ImGui::Button("Next"))
 		CCDRotate = true;
@@ -115,7 +118,7 @@ void UIManager::UIShowSampleWindow()
 		CCDRotateContinuous = true;
 	ImGui::SameLine();
 	if (ImGui::Button("CCD Stop"))
-		CCDRotateContinuous = false;
+		CCDRotateContinuous = false;*/
 
 	/*std::string ccd_cosine = "Cosine: " + std::to_string(CCDCosine);
 	std::string ccd_angle = "Angle: " + std::to_string(CCDAngle);
@@ -124,8 +127,8 @@ void UIManager::UIShowSampleWindow()
 	ImGui::Text(ccd_angle.c_str());
 	ImGui::Text(ccd_desiredDistance.c_str());*/
 
-	std::string ccs_closeEnough = "Found Target: " + std::to_string(CCDCloseEnough);
-	ImGui::Text(ccs_closeEnough.c_str());
+	/*std::string ccs_closeEnough = "Found Target: " + std::to_string(CCDCloseEnough);
+	ImGui::Text(ccs_closeEnough.c_str());*/
 
 	/*std::string anim_per_sec = std::to_string(AnimPerSec);
 	ImGui::Text("Animation cycles per second: ----->"); ImGui::SameLine();
@@ -133,25 +136,25 @@ void UIManager::UIShowSampleWindow()
 	ImGui::Text(" ");*/
 
 
-	ImGui::Text("--------------------");
+	/*ImGui::Text("--------------------");
 	ImGui::Text("Cloth Simulation");
 	ImGui::Checkbox("Release stick 1", &Stick1Released);
 	ImGui::Checkbox("Release stick 2", &Stick2Released);
 	ImGui::Checkbox("Release stick 3", &Stick3Released);
-	ImGui::Checkbox("Release stick 4", &Stick4Released);
-	ImGui::Text("-------------------------------------------------------");
+	ImGui::Checkbox("Release stick 4", &Stick4Released);*/
+	/*ImGui::Text("-------------------------------------------------------");
 	ImGui::Text("X: "); ImGui::SameLine();
 	ImGui::SliderFloat("Position_Stick1_X", (float*)&Stick1LocationX, -20.0f, 20.0f);
 	ImGui::Text("Y: "); ImGui::SameLine();
 	ImGui::SliderFloat("Position_Stick1_Y", (float*)&Stick1LocationY, 0.5f, 20.0f);
 	ImGui::Text("Z: "); ImGui::SameLine();
-	ImGui::SliderFloat("Position_Stick1_Z", (float*)&Stick1LocationZ, -20.0f, 20.0f);
+	ImGui::SliderFloat("Position_Stick1_Z", (float*)&Stick1LocationZ, -20.0f, 20.0f);*/
 
 	/*ImGui::Text("--------------------");
 	ImGui::Text("Dumping");
 	ImGui::Text("--------------------");
 	ImGui::SliderFloat("Dumping", (float*)&DumpFactor, 0.0f, 1.0f);*/
-	ImGui::Text("Gravity");
+	/*ImGui::Text("Gravity");
 	ImGui::Text("--------------------");
 	ImGui::SliderFloat("Gravity", (float*)&Gravity, -19.6f, 0.0f);
 	ImGui::Text("--------------------");
@@ -159,7 +162,7 @@ void UIManager::UIShowSampleWindow()
 	ImGui::Text("Cloth Scale");
 	ImGui::Text("--------------------");
 	ImGui::SliderFloat("Scale", (float*)&Scale, 0.1f, 4.0f);
-	ImGui::Text("--------------------");
+	ImGui::Text("--------------------");*/
 
 
 	ImGui::Text("--------------------");
@@ -182,6 +185,45 @@ void UIManager::UIShowSampleWindow()
 	ImGui::Text(" ");
 	ImGui::Text(" ");
 	
+	ImGui::Text("==================");
+	ImGui::Text("|Ocean Controls|");
+	ImGui::Text("==================");
+
+
+
+
+
+	//ImGui::Checkbox("Spiral System", &SpiralActive);
+	//ImGui::Checkbox("Vortex", &VortexActive);
+	ImGui::SliderFloat("Length: ", (float*)&OceanGridLength, 1.0, 64.0f);
+	ImGui::SliderFloat("Time Step: ", (float*)&OceanTimeStep, 0.0f, 10.0f);
+	ImGui::SliderFloat("Height: ", (float*)&HeigthControl, 0.0f, 0.05f);
+
+
+	//if (VortexActive)
+	//{
+	//	ImGui::Text("==================");
+	//	ImGui::Text("|Vortex Controls|");
+	//	ImGui::Text("==================");
+	//	ImGui::SliderFloat("Tightness: ", (float*)&VortexTightnes, 1.0f, 2.0f);
+	//	ImGui::SliderFloat("V. Rotation Rate: ", (float*)&VortexRotationRate, 1.0f, 10.0f);
+	//}
+
+	//if (SpiralActive)
+	//{
+	//	ImGui::Text("==================");
+	//	ImGui::Text("|Spiral Controls|");
+	//	ImGui::Text("==================");
+	//	//ImGui::SliderInt("Number of Particles: ", (int*)&SpiralMaxParticles, 100, 1000);
+	//	ImGui::Checkbox("Cool Predefined Effect", &CoolEffect);
+	//	ImGui::Checkbox("Increase Acceleration", &AccelIncrease);
+	//	ImGui::SliderInt("LifeSpan of Particles: ", (int*)&SpiralLifeSpan, 1, 30);
+	//	ImGui::SliderFloat("S. Rotation Rate: ", (float*)&SpiralSigma, 1.0f, 10.0f);
+	//	ImGui::SliderFloat3("Velocity", (float*)&SpiralSpawnVelocity[0], -1.0f, 1.0f);
+	//	ImGui::SliderFloat("Black Hole Gravity: ", (float*)&BHGravity, 0.0f, 30.0f);
+	//	ImGui::SliderFloat("Black Hole Mass: ", (float*)&BHMass, 1.0f, 50.0f);
+	//	ImGui::SliderFloat("Dumping Factor: ", (float*)&DumpingFactor, 0.001f, 0.01f);
+	//}
 
 
 	
@@ -202,7 +244,7 @@ void UIManager::UIShowSampleWindow()
 	if (AnimationSpeed <= 0)
 		AnimationSpeed = 1;*/
 
-	ImGui::Text("ANIMATION PAUSE/PLAY -> "); ImGui::SameLine();
+	/*ImGui::Text("ANIMATION PAUSE/PLAY -> "); ImGui::SameLine();
 	if (Playing)
 	{
 		if (ImGui::SmallButton("Pause") || inputManager->IsKeyPressed(SDL_SCANCODE_SPACE))
@@ -211,9 +253,9 @@ void UIManager::UIShowSampleWindow()
 	{
 		if (ImGui::SmallButton("Play") || inputManager->IsKeyPressed(SDL_SCANCODE_SPACE))
 			Playing = true;
-	}
+	}*/
 	
-	ImGui::Text("=================");
+	/*ImGui::Text("=================");
 	ImGui::Text("|Spline Controls|");
 	ImGui::Text("================="); 
 	ImGui::Text("o Create up to 8 control points by clicking");
@@ -234,7 +276,7 @@ void UIManager::UIShowSampleWindow()
 	}
 
 	ImGui::Text(" ");
-	ImGui::Text(" ");
+	ImGui::Text(" ");*/
 	/*ImGui::SliderFloat("Character Peace on path-> ", (float*)&PathPeace, 1.0f, 5.0f);
 	ImGui::Text("");*/
 
@@ -262,20 +304,21 @@ void UIManager::UIShowSampleWindow()
 			ImGui::Text(name.c_str());
 			ImGui::Text("-------------------------------------------------------");
 			ImGui::Text("x                  Y                  Z");
-			label = "Position_" + ObjectsName[i] + "_" + std::to_string(i);
-			ImGui::SliderFloat3(label.c_str(), (float*)&(*ObjectsPosition[i]), -1000.0f, 1000.0f);
+
+			if (ObjectsName[i] != "Target")
+			{
+				label = "Position_" + ObjectsName[i] + "_" + std::to_string(i);
+				ImGui::SliderFloat3(label.c_str(), (float*)&(*ObjectsPosition[i]), -1000.0f, 1000.0f);
+			}		
 			label = "Rotation_" + ObjectsName[i] + "_" + std::to_string(i);
 			ImGui::SliderFloat3(label.c_str(), (float*)&(*ObjectsRotation[i]), -360.0f, 360.0f);
 			/*label = "Scale_" + ObjectsName[i] + "_" + std::to_string(i);
 			ImGui::SliderFloat(label.c_str(), (float*)&(*ObjectsScale[i]).x, 0.0f, 2.0f);*/
 			ImGui::Text("");
+			//
 		}
 	}
-	
 
-	
-
-	
 	
 	//
 }

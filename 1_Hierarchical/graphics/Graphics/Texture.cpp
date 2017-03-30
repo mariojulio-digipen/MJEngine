@@ -32,6 +32,7 @@ GLuint Texture::Create()
 
 	
 	glGenTextures(1, &textureId);
+	GLenum a =glGetError();
 
 	glBindTexture(GL_TEXTURE_2D, textureId);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA,

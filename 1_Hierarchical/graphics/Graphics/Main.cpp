@@ -15,7 +15,7 @@
 #include <gtx\euler_angles.hpp>
 #include <glm.hpp>
 
-
+#include "VideoBuffer.h"
 #include "MouseManager.h"
 #include "ModelLoader.h"
 #include "FrameRateController.h"
@@ -54,7 +54,10 @@ SDL_Window* mainWindow = NULL;
 
 Shader* shader = NULL;
 Shader* particleShader = NULL;
+Shader* meshParticleShader = NULL;
+Shader* oceanShader = NULL;
 
+VideoBuffer* buffer = NULL;
 
 FBO* globalLightFBO = NULL;
 
@@ -98,6 +101,86 @@ void RunAnimationHomework1();
 std::string readconfigfile(const char* fileName);
 int homework = 0;
 
+
+
+typedef std::vector<std::vector<int>> Matrix;
+
+Matrix makeMatrixZeroes(int M, int N)
+{
+	Matrix m;
+	for (size_t i = 0; i < N; i++)
+	{
+		std::vector<int> rows(M);
+		m.push_back(rows);
+	}
+
+	return m;
+}
+
+Matrix makeMatrix(int M, int N)
+{
+	Matrix m;
+	for (size_t i = 0; i < N; i++)
+	{
+		std::vector<int> rows(M);
+		m.push_back(rows);
+	}
+
+	for (size_t i = 0; i < M; ++i)
+	{
+		for (size_t j = i + 1; j < N; ++j)
+		{
+			m[i][j] = 1;
+		}
+
+	}
+
+	return m;
+}
+
+Matrix multiplyMatrices(Matrix A, Matrix B)
+{
+	int sizeM = A.size();
+	int sizeN = B[0].size();      //rows, cols
+	Matrix mres = makeMatrixZeroes(sizeM, sizeN);
+
+	for (size_t k = 0; k < sizeN; k++)
+	{
+		for (size_t i = 0; i < sizeM; i++)
+		{
+			for (size_t j = 0; j < sizeN; j++)
+			{
+				mres[k][i] += A[k][j] * B[j][i];
+			}
+		}
+	}
+
+	return mres;
+}
+
+void printMatrix(Matrix A)
+{
+	int size = A[0].size();
+	for (size_t c = 0; c < size; c++) { std::cout << " --- "; }
+
+	for (size_t i = 0; i < A.size(); ++i)
+	{
+		
+		std::cout << std::endl;
+		std::cout << "| ";
+		for (size_t j = 0; j < A[i].size(); ++j)
+		{
+			std::cout << A[i][j] << "   ";
+		}
+		std::cout << std::endl;
+
+	}
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+}
+
+
 int main(int argc, char *argv[])
 {
 	// testing vqm
@@ -134,6 +217,27 @@ int main(int argc, char *argv[])
 
 	res = vqm * v;*/
 
+	for (size_t i = 2; i <= 6; ++i)
+	{
+		Matrix A = makeMatrix(i, i);
+		//printMatrix(A);
+
+		Matrix R = multiplyMatrices(A, A);
+		printMatrix(R);
+
+	}
+
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
 
 	ReadHomeworkConfig();
 
@@ -144,14 +248,18 @@ int main(int argc, char *argv[])
 
 	//ndsShader->Init("Deferred_GBufferPass_Vertex.glsl", "NDCShaderFragment.glsl");
 	shader->Init("DefaultVertex.glsl", "DefaultFragment.glsl");
+	meshParticleShader->Init("MeshParticleVertex.glsl", "MeshParticleFragment.glsl");
+	oceanShader->Init("OceanVertex.glsl", "OceanFragment.glsl");
 	//particleShader->Init("ClothVertex.glsl", "ClothFragment.glsl");
 
 	renderManager->AttachShaders(shader);
 	renderManager->InitCameras();
 
 	resourceManager->GenerateGameObjects();
+	
+	resourceManager->Start();
 
-	physics3DManager->Init();
+	//physics3DManager->Init();
 
 	//resourceManager->SpawnNewGameObjectFromArchetypeForDeferredRendering("SphereLight");
 	
@@ -188,7 +296,7 @@ void RunGame()
 		mouseManager->UpdateMouseState();
 		inputManager->UpdateKeyStates();
 		physicsManager->Update();
-		physics3DManager->Update();
+		//physics3DManager->Update();
 		uiManager->UINewFrame();
 
 		
@@ -220,6 +328,7 @@ void RenderStuff()
 	if (frameRateController->GetFrameNumber() > 1)
 		SDL_GL_SwapWindow(mainWindow);
 
+	//buffer->save(true);
 }
 
 
@@ -494,12 +603,14 @@ void Cleanup()
 
 	delete eventManager;
 	delete physicsManager;
-	delete physics3DManager;
+	//delete physics3DManager;
 	delete resourceManager;
 	delete frameRateController;
 	delete inputManager;
 	delete renderManager;
 	delete shader;
+	delete meshParticleShader;
+	delete oceanShader;
 	//delete ndsShader;
 
 	// Delete ImGui
@@ -588,6 +699,8 @@ bool Init()
 
 	//TODO - add an exception controller
 	shader = new Shader;
+	meshParticleShader = new Shader;
+	oceanShader = new Shader;
 
 	renderManager = new RenderManager;
 	mouseManager = new MouseManager;
@@ -595,11 +708,14 @@ bool Init()
 	frameRateController = new FrameRateController;
 	resourceManager = new ResourceManager;
 	physicsManager = new PhysicsManager;
-	physics3DManager = new Pyshics3DManager;
+	//physics3DManager = new Pyshics3DManager;
 	eventManager = new EventManager;
 
 	// setup imgui
 	uiManager->UIInit(mainWindow);
+
+	// video buffer
+	buffer = new VideoBuffer(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 	return true;
 

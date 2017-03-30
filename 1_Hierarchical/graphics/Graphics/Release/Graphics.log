@@ -1,5 +1,0 @@
-﻿  Quaternion.cpp
-Quaternion.cpp(73): error C2511: 'glm::mat4 Quaternion::operator *(Quaternion,glm::mat4)': overloaded member function not found in 'Quaternion'
-  c:\users\mariojulio\dropbox\digipen\cs560 - animation\1_hierarchical\1_hierarchical\graphics\graphics\Quaternion.h(19): note: see declaration of 'Quaternion'
-Quaternion.cpp(74): error C2352: 'Quaternion::qprod': illegal call of non-static member function
-  c:\users\mariojulio\dropbox\digipen\cs560 - animation\1_hierarchical\1_hierarchical\graphics\graphics\Quaternion.h(28): note: see declaration of 'Quaternion::qprod'

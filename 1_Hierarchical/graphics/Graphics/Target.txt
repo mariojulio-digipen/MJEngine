@@ -24,7 +24,7 @@ modelpath ArtAssets\exported\target.obj
 #
 
 #c Move3DComponent
-#c UIUpdaterComponent
+c UIUpdaterComponent
 c PainterComponent
 
 #
@@ -34,13 +34,13 @@ c PainterComponent
 compprops
 ### TransformComponent Properties ###
 #   x      y      z
-p 0.0000 0.5000 0.0000
+p 0.0000 0.0000 0.0000
 
 # angleX angleY angleZ
 r 0.0000 0.0000 0.0000
 
 #   sx     sy     sz
-s 2.000 2.000 2.000
+s 1.500 1.500 1.500
 end_TransformComponent
 
 ### Move3D Properties ###

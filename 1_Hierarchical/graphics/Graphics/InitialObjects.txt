@@ -13,20 +13,33 @@
 #o meshpyramid
 #o Cube
 #f FPlane
-#
+
+#f FMeshPart
+#o MeshParticle
+
+#o ParticleVortexSystem
+#o ParticleSpiralSystem
 o Sphere
+o Ball
+o Ocean
+
 #
 o Ball
 #
-#o SphereLight
+o SphereLight
 #
 #f Tad
-#f boy
+
+
+#o Target
+#o BlackHole
+
+#f boy // remember this skeleton has the Volume3DComponent in ResourceManager (removed!)
 #f snake_skeleton
 #
 
-o Target
-o Cloth
+
+#o Cloth
 
 #o Hips
 #o Child1
@@ -40,7 +53,9 @@ o Cloth
 #o Snaky2
 #
 #o wacky_plane
-o Plane
+
+#o Plane
+
 #o Target
 #
 #o Cube2

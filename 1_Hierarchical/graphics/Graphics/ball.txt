@@ -8,7 +8,7 @@ objectname Ball
 # Render mode: 2D or 3D
 #
 
-rendermode OFF_3D
+rendermode ON_3D
 
 
 #
@@ -38,13 +38,13 @@ c PainterComponent
 compprops
 ### TransformComponent Properties ###
 #   x      y      z
-p 8.0000 8.0000 0.0000
+p 0.0000 5.000 -60.0000
 
 # angleX angleY angleZ
 r 0.0000 0.0000 0.0000
 
 #   sx     sy     sz
-s 1.0000 1.0000 1.0000
+s 80.0000 80.0000 80.0000
 
 #
 cs global

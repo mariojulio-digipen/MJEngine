@@ -43,8 +43,17 @@ bool LightPointComponent::Init()
 	// load objects, before serialization
 	lightAmbient = glm::vec3(0.15f, 0.15f, 0.15f)*1.5f;
 	lightIntensity = glm::vec3(1.3f, 1.3f, 1.3f)*2.0f; // -> serialize this info later
-	lightColor = glm::vec3(0.0f, 0.0f, 1.0f);
+	
+	
+	// light hardcoded!!!
+	
+	
+	lightColor = glm::vec3(0.5f, 0.5f, 0.5f);
 
+	
+	
+	
+	
 	TransformComponent* trans = GetOwner()->FindComponent<TransformComponent>();
 	lighPosition = trans->GetPosition();
 	BRDFLight lightPoint;

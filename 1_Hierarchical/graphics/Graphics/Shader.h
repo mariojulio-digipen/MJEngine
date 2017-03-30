@@ -25,6 +25,7 @@ public:
 	int TangetAttLocation;
 	int BoneIdAttLocation;
 	int BoneWeightAttLocation;
+	int InstanceMatrixAttLocation;
 
 	/*int DebugVertexAttLocation;
 	int DebugColorAttLocation;*/

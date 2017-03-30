@@ -50,6 +50,11 @@ void Camera3D::buildView()
 
 	View = glm::lookAt(Position, Position + ViewDirection, Up);
 	MouseMove->OldPosition = MouseMove->Position;
+
+	std::cout << "Position (" << Position.x << ", "
+		<< Position.y << ", " << Position.z << ")" << std::endl;
+	std::cout << "ViewDirection: " << ViewDirection.x << ", " 
+		<< ViewDirection.y << ", " << ViewDirection.z << std::endl;
 }
 
 void Camera3D::buildProjection()
